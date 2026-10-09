@@ -51,15 +51,16 @@ export async function pageMetadata({
 }
 
 /**
- * The site's name for Google ("Imara Company"), shown above our search
- * results; alternateName lists the other names people may search for.
+ * The site's name for Google, shown above our search results. The owner
+ * chose the web address itself ("imaracompany.com"); alternateName lists
+ * the other names people may search for.
  */
 export function websiteJsonLd(lang: Locale) {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: site.brand,
-    alternateName: [site.name, site.shortName, "imaracompany.com"],
+    name: "imaracompany.com",
+    alternateName: [site.brand, site.name, site.shortName],
     url: `${site.url}/`,
     inLanguage: lang,
   };
