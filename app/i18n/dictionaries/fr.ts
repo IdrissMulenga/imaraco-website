@@ -574,6 +574,8 @@ export const fr: Dictionary = {
     teamTitle: "Fondateur et équipe",
     founderRole: "Fondateur",
     founderBio: "Idriss a fondé Imara pour créer des logiciels qui fonctionnent pour les gens au Burundi et dans le monde entier.",
+    designLeadRole: "Responsable du design produit",
+    designLeadBio: "Ahmad dirige le design de tous les produits Imara : l'apparence, l'expérience et le fonctionnement de chaque application pour ceux qui l'utilisent.",
     growing: "Nous recrutons",
     growingText: "Les profils de l'équipe arrivent bientôt. Envie de travailler avec nous ? Contactez-nous.",
     ctaTitle: "Construisons quelque chose de solide",

@@ -575,6 +575,8 @@ export const en = {
     teamTitle: "Founder & team",
     founderRole: "Founder",
     founderBio: "Idriss founded Imara to build software that works for people in Burundi and around the world.",
+    designLeadRole: "Head of Product Design",
+    designLeadBio: "Ahmad leads the design of every Imara product, shaping how each app looks, feels and works for the people who use it.",
     growing: "We're growing",
     growingText: "Team profiles coming soon. Interested in working with us? Get in touch.",
     ctaTitle: "Let's build something strong",

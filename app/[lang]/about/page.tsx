@@ -44,6 +44,10 @@ export default async function AboutPage() {
   const { t } = await getI18n();
   const a = t.aboutPage;
   const values = a.values.map((v, i) => ({ ...v, ...valueStyle[i] }));
+  const team = [
+    { name: "Idriss Murenga", initials: "IM", role: a.founderRole, bio: a.founderBio },
+    { name: "Ahmad Benab", initials: "AB", role: a.designLeadRole, bio: a.designLeadBio },
+  ];
   return (
     <>
       <PageHeader
@@ -140,49 +144,13 @@ export default async function AboutPage() {
           <SectionHeading id="team-title" eyebrow={a.teamEyebrow} title={a.teamTitle} />
         </Box>
         <SimpleGrid columns={{ base: 1, sm: 2, lg: 3 }} gap="5">
-          <Reveal>
-            <Stack
-              gap="4"
-              h="full"
-              p="7"
-              bg="bg.panel"
-              borderWidth="1px"
-              borderColor="border"
-              borderRadius="l4"
-              position="relative"
-              overflow="hidden"
-            >
-              <Box h="1" position="absolute" top="0" left="0" right="0" bgImage="linear-gradient(90deg, #F7931E, #FFC93C)" />
-              <Box
-                boxSize="16"
-                borderRadius="full"
-                bgImage={`linear-gradient(145deg, #13807D, ${TEAL})`}
-                color="white"
-                fontWeight="bold"
-                fontSize="xl"
-                display="grid"
-                placeItems="center"
-                boxShadow={`0 12px 24px -12px ${TEAL}`}
-                aria-hidden="true"
-              >
-                IM
-              </Box>
-              <div>
-                <Heading as="h3" size="md">
-                  Idriss Murenga
-                </Heading>
-                <Text color="brand.fg" fontWeight="medium">
-                  {a.founderRole}
-                </Text>
-              </div>
-              {/* PLACEHOLDER: founder bio. */}
-              <Text color="fg.muted" fontSize="sm">
-                {a.founderBio}
-              </Text>
-            </Stack>
-          </Reveal>
+          {team.map((m, i) => (
+            <Reveal key={m.name} delay={i * 0.08}>
+              <TeamCard {...m} />
+            </Reveal>
+          ))}
           {/* PLACEHOLDER: add team members here once they agree to be listed. */}
-          <Reveal delay={0.08}>
+          <Reveal delay={team.length * 0.08}>
             <Stack
               gap="3"
               h="full"
@@ -214,5 +182,49 @@ export default async function AboutPage() {
         secondary={{ href: routes.contact, label: t.common.contactUs }}
       />
     </>
+  );
+}
+
+// One person on the "Founder & team" grid.
+function TeamCard({ name, initials, role, bio }: { name: string; initials: string; role: string; bio: string }) {
+  return (
+    <Stack
+      gap="4"
+      h="full"
+      p="7"
+      bg="bg.panel"
+      borderWidth="1px"
+      borderColor="border"
+      borderRadius="l4"
+      position="relative"
+      overflow="hidden"
+    >
+      <Box h="1" position="absolute" top="0" left="0" right="0" bgImage="linear-gradient(90deg, #F7931E, #FFC93C)" />
+      <Box
+        boxSize="16"
+        borderRadius="full"
+        bgImage={`linear-gradient(145deg, #13807D, ${TEAL})`}
+        color="white"
+        fontWeight="bold"
+        fontSize="xl"
+        display="grid"
+        placeItems="center"
+        boxShadow={`0 12px 24px -12px ${TEAL}`}
+        aria-hidden="true"
+      >
+        {initials}
+      </Box>
+      <div>
+        <Heading as="h3" size="md">
+          {name}
+        </Heading>
+        <Text color="brand.fg" fontWeight="medium">
+          {role}
+        </Text>
+      </div>
+      <Text color="fg.muted" fontSize="sm">
+        {bio}
+      </Text>
+    </Stack>
   );
 }
