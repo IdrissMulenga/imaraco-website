@@ -35,7 +35,7 @@ const reasons: { key: ReasonKey; icon: React.ReactNode; color: [string, string];
   { key: "languages", icon: <PiTranslateDuotone />, color: ["#A78BFA", "#6D28D9"] },
   { key: "light", icon: <PiLightningDuotone />, color: ["#FBBF24", "#D97706"], wide: true },
   { key: "privacy", icon: <PiShieldCheckDuotone />, color: ["#F472B6", "#BE185D"], wide: true },
-  { key: "support", icon: <PiChatsCircleDuotone />, color: ["#FB923C", "#C2410C"] },
+  { key: "support", icon: <PiChatsCircleDuotone />, color: ["#F9A43A", "#C2650B"] },
 ];
 
 function ReasonCard({ reason, index }: { reason: Reason; index: number }) {

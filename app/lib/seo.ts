@@ -26,7 +26,7 @@ export async function pageMetadata({
     url: localePath(lang, "/opengraph-image"),
     width: 1200,
     height: 630,
-    alt: `Imara: ${t.hero.build} ${t.hero.run} ${t.hero.fix}`,
+    alt: `${site.brand}: ${t.hero.build} ${t.hero.run} ${t.hero.fix}`,
   };
   const languages = Object.fromEntries(locales.map((l) => [l, localePath(l, path)]));
   return {
@@ -50,13 +50,28 @@ export async function pageMetadata({
   };
 }
 
+/**
+ * The site's name for Google ("Imara Company"), shown above our search
+ * results; alternateName lists the other names people may search for.
+ */
+export function websiteJsonLd(lang: Locale) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: site.brand,
+    alternateName: [site.name, site.shortName, "imaracompany.com"],
+    url: `${site.url}/`,
+    inLanguage: lang,
+  };
+}
+
 /** Company info for Google, in the page's language. */
 export function organizationJsonLd(description: string) {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: site.name,
-    alternateName: site.shortName,
+    alternateName: [site.brand, site.shortName],
     url: site.url,
     logo: `${site.url}/brand/imara-icon.png`,
     description,

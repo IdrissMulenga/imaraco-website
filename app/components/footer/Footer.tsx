@@ -66,7 +66,7 @@ function FooterColumn({ title, links }: { title: string; links: FooterLink[] }) 
 const socials = [
   { label: "WhatsApp", href: whatsappLink(), icon: <PiWhatsappLogoFill />, color: "#22C55E" },
   { label: `Instagram ${site.instagram.handle}`, href: site.instagram.url, icon: <PiInstagramLogoFill />, color: "#E1306C" },
-  { label: `Email ${site.email}`, href: `mailto:${site.email}`, icon: <PiEnvelopeSimpleFill />, color: "#F37421" },
+  { label: `Email ${site.email}`, href: `mailto:${site.email}`, icon: <PiEnvelopeSimpleFill />, color: "#F7931E" },
 ];
 
 /**
@@ -89,7 +89,7 @@ export async function Footer() {
       mt={{ base: "8", md: "12" }}
     >
       {/* Decoration: warm glow + large faded logo mark */}
-      <Box aria-hidden="true" position="absolute" top="-40" left="20%" w="60%" h="72" borderRadius="full" bg="#F37421" opacity={{ _light: 0.1, _dark: 0.18 }} filter="blur(100px)" />
+      <Box aria-hidden="true" position="absolute" top="-40" left="20%" w="60%" h="72" borderRadius="full" bg="#F7931E" opacity={{ _light: 0.1, _dark: 0.18 }} filter="blur(100px)" />
       <Box aria-hidden="true" position="absolute" right={{ base: "-16", md: "-6" }} bottom={{ base: "-10", md: "-16" }} opacity={{ _light: 0.04, _dark: 0.05 }}>
         <LogoMark height={{ base: "72", md: "96" }} color="fg" />
       </Box>

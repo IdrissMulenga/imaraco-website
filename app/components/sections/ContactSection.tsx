@@ -59,7 +59,7 @@ function getMethods(t: Dictionary): Method[] {
       icon: <PiMapPinDuotone />,
       label: t.contact.location,
       value: t.contact.locationValue,
-      color: ["#FB923C", "#C2410C"],
+      color: ["#F9A43A", "#C2650B"],
     },
   ];
 }
@@ -172,7 +172,7 @@ export async function ContactFormCard({
       boxShadow="0 30px 60px -40px rgba(0,0,0,.35)"
     >
       {/* Orange accent line + soft glow */}
-      <Box h="1" bgImage="linear-gradient(90deg, #F37421, #FFC24D, #F37421)" />
+      <Box h="1" bgImage="linear-gradient(90deg, #F7931E, #FFC93C, #F7931E)" />
       <Box
         aria-hidden="true"
         position="absolute"
@@ -190,7 +190,7 @@ export async function ContactFormCard({
           <Box
             boxSize="11"
             borderRadius="28%"
-            bgImage="linear-gradient(145deg, #F7883F, #B44C0D)"
+            bgImage="linear-gradient(145deg, #F9A43A, #C2650B)"
             color="white"
             display="grid"
             placeItems="center"

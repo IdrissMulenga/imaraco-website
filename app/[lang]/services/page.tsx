@@ -22,7 +22,7 @@ const processStyle = [
   { icon: <PiMagnifyingGlassDuotone />, color: ["#38BDF8", "#0369A1"] },
   { icon: <PiPencilRulerDuotone />, color: ["#A78BFA", "#6D28D9"] },
   { icon: <PiCodeDuotone />, color: ["#34D399", "#047857"] },
-  { icon: <PiRocketLaunchDuotone />, color: ["#FB923C", "#C2410C"] },
+  { icon: <PiRocketLaunchDuotone />, color: ["#F9A43A", "#C2650B"] },
 ];
 const smooth = "cubic-bezier(.22,1,.36,1)";
 

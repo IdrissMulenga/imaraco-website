@@ -29,8 +29,8 @@ export async function BandShowcase({ headingAs = "h2" }: { headingAs?: "h2" | "h
         overflow="hidden"
         position="relative"
         bgImage={{
-          _light: "radial-gradient(circle at 85% 30%, #FFE4D1, transparent 55%)",
-          _dark: "radial-gradient(circle at 85% 30%, #3A1F0F, transparent 55%)",
+          _light: "radial-gradient(circle at 85% 30%, #FEEBCC, transparent 55%)",
+          _dark: "radial-gradient(circle at 85% 30%, #3A2510, transparent 55%)",
         }}
         bg="bg.panel"
       >

@@ -36,7 +36,7 @@ const valueStyle: { icon: React.ReactNode; color: [string, string] }[] = [
   { icon: <PiEyeDuotone />, color: ["#A78BFA", "#6D28D9"] },
   { icon: <PiHandshakeDuotone />, color: ["#34D399", "#047857"] },
   { icon: <PiLightningDuotone />, color: ["#FBBF24", "#D97706"] },
-  { icon: <PiMapPinDuotone />, color: ["#FB923C", "#C2410C"] },
+  { icon: <PiMapPinDuotone />, color: ["#F9A43A", "#C2650B"] },
 ];
 
 // About page: "/[lang]/about"
@@ -59,7 +59,7 @@ export default async function AboutPage() {
             <IconCard
               as="h2"
               icon={<PiTargetDuotone />}
-              color={["#F7883F", "#B44C0D"]}
+              color={["#F9A43A", "#C2650B"]}
               title={a.missionTitle}
               text={a.missionText}
             />
@@ -152,7 +152,7 @@ export default async function AboutPage() {
               position="relative"
               overflow="hidden"
             >
-              <Box h="1" position="absolute" top="0" left="0" right="0" bgImage="linear-gradient(90deg, #F37421, #FFC24D)" />
+              <Box h="1" position="absolute" top="0" left="0" right="0" bgImage="linear-gradient(90deg, #F7931E, #FFC93C)" />
               <Box
                 boxSize="16"
                 borderRadius="full"

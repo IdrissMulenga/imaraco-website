@@ -80,7 +80,7 @@ export default async function LabsPage() {
               <Box
                 boxSize="12"
                 borderRadius="28%"
-                bgImage="linear-gradient(145deg, #F7883F, #B44C0D)"
+                bgImage="linear-gradient(145deg, #F9A43A, #C2650B)"
                 color="white"
                 display="grid"
                 placeItems="center"

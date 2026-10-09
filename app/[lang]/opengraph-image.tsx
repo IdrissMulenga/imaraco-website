@@ -15,14 +15,15 @@ import { getDictionary } from "@/i18n/server";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
-export const alt = "Imara: Build it. Run it. Fix it.";
+export const alt = "Imara Company: Build it. Run it. Fix it.";
 
 // Draw both pictures (en, fr) once, when the site is built.
 export function generateStaticParams() {
   return locales.map((lang) => ({ lang }));
 }
 
-const ORANGE = "#F37421";
+// Golden orange accent.
+const ACCENT = "#F7931E";
 const fontDir = join(process.cwd(), "app/assets/fonts");
 
 /**
@@ -60,7 +61,7 @@ export default async function OpengraphImage({ params }: { params: Promise<{ lan
           position: "relative",
           backgroundColor: "#0F0D0C",
           // Warm glow behind the big emblem
-          backgroundImage: "radial-gradient(circle at 80% 45%, rgba(243,116,33,0.5) 0%, rgba(243,116,33,0) 42%)",
+          backgroundImage: "radial-gradient(circle at 80% 45%, rgba(247,147,30,0.5) 0%, rgba(247,147,30,0) 42%)",
           color: "white",
           fontFamily: "Outfit",
           padding: "64px 72px",
@@ -86,7 +87,7 @@ export default async function OpengraphImage({ params }: { params: Promise<{ lan
           <div style={{ display: "flex", flexDirection: "column", fontWeight: 700, fontSize: 86, lineHeight: 1.04, letterSpacing: "-0.03em" }}>
             <div>{t.hero.build}</div>
             <div>{t.hero.run}</div>
-            <div style={{ color: ORANGE }}>{t.hero.fix}</div>
+            <div style={{ color: ACCENT }}>{t.hero.fix}</div>
           </div>
 
           {/* Footer line */}
@@ -97,7 +98,7 @@ export default async function OpengraphImage({ params }: { params: Promise<{ lan
                 <div key={i}>{word}</div>
               ))}
             </div>
-            <div style={{ width: 8, height: 8, borderRadius: 8, background: ORANGE, display: "flex" }} />
+            <div style={{ width: 8, height: 8, borderRadius: 8, background: ACCENT, display: "flex" }} />
             <div style={{ color: "white" }}>{domain}</div>
           </div>
         </div>

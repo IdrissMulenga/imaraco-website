@@ -39,12 +39,12 @@ export const fr: Dictionary = {
   },
 
   meta: {
-    siteTitle: "Imara : la technologie, faite pour durer",
+    siteTitle: "Imara Company : la technologie, faite pour durer",
     siteDescription:
       "Imara Company Limited conçoit des produits logiciels et propose des services : sites web, applications web et mobiles, solutions d'IA et assistance informatique.",
-    homeTitle: "Imara : On le crée. On le fait tourner. On le répare.",
+    homeTitle: "Imara Company : On le crée. On le fait tourner. On le répare.",
     homeDescription:
-      "Sites web, applications web et mobiles pour les entreprises, nos propres produits logiciels, et une assistance informatique accueillante pour ordinateurs et téléphones.",
+      "Imara Company crée des sites web, des applications web et mobiles pour les entreprises, développe ses propres produits logiciels et offre une assistance informatique accueillante pour ordinateurs et téléphones.",
     productsTitle: "Produits",
     productsDescription:
       "Imara Afya, Duka POS, Système de gestion scolaire et Imara Pay : des produits logiciels pensés pour les conditions réelles.",

@@ -14,7 +14,7 @@ import { I18nProvider } from "@/i18n/client";
 import { isLocale, locales } from "@/i18n/config";
 import { clientKeys, type ClientDictionary } from "@/i18n/dictionaries/en";
 import { getI18n } from "@/i18n/server";
-import { organizationJsonLd } from "@/lib/seo";
+import { organizationJsonLd, websiteJsonLd } from "@/lib/seo";
 
 // Outfit: the font for the whole website (headings and text).
 const outfit = Outfit({
@@ -40,7 +40,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getI18n();
   return {
     metadataBase: new URL(site.url),
-    title: { default: t.meta.siteTitle, template: "%s · Imara" },
+    title: { default: t.meta.siteTitle, template: `%s · ${site.brand}` },
     description: t.meta.siteDescription,
     applicationName: site.name,
     formatDetection: { telephone: false },
@@ -95,6 +95,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           </I18nProvider>
         </Providers>
         <JsonLd data={organizationJsonLd(t.meta.siteDescription)} />
+        <JsonLd data={websiteJsonLd(lang)} />
         <Analytics />
       </body>
     </html>

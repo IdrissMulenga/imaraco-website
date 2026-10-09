@@ -10,16 +10,17 @@ import { cardAnatomy } from "@chakra-ui/react/anatomy";
 /**
  * Imara design system (Chakra UI v3).
  *
- * - One strong primary: "brand" = Imara orange #F37421 (brand.500).
+ * - One strong primary: "brand" = Imara golden orange #F7931E (brand.500),
+ *   an orange leaning slightly towards yellow.
  * - Warm neutrals override Chakra's `gray`, so every built-in semantic
  *   token (bg.*, fg.*, border.*) picks them up.
  * - `colorPalette: brand` is set globally, so components use the brand
  *   color unless told otherwise.
  *
- * Contrast: light mode uses white text on #F37421 (2.9:1, below the WCAG AA
- * 4.5:1 guideline, chosen for the brand look); dark mode uses near-black
- * text on orange (6.5:1). Orange *text* on white uses
- * brand.700 (5.3:1). fg.muted (gray.600 on white) = 7.6:1.
+ * Contrast: light mode uses white text on #F7931E buttons (about 2.3:1,
+ * below the WCAG AA 4.5:1 guideline, kept for the brand look as the owner
+ * chose); dark mode uses near-black text on it. Orange *text* on white uses
+ * the deeper brand.700 (about 4.8:1). fg.muted (gray.600 on white) = 7.6:1.
  */
 
 const button = defineRecipe({
@@ -124,17 +125,17 @@ const config = defineConfig({
     tokens: {
       colors: {
         brand: {
-          50: { value: "#FFF4EC" },
-          100: { value: "#FFE4D1" },
-          200: { value: "#FDC6A1" },
-          300: { value: "#FAA36C" },
-          400: { value: "#F7883F" },
-          500: { value: "#F37421" }, // Imara orange
-          600: { value: "#D95F12" },
-          700: { value: "#B44C0D" },
-          800: { value: "#8F3D10" },
-          900: { value: "#723411" },
-          950: { value: "#3E1806" },
+          50: { value: "#FFF7EB" },
+          100: { value: "#FEEBCC" },
+          200: { value: "#FDD496" },
+          300: { value: "#FBB95C" },
+          400: { value: "#F9A43A" },
+          500: { value: "#F7931E" }, // Imara golden orange
+          600: { value: "#DD7A0C" },
+          700: { value: "#A85A09" },
+          800: { value: "#8A480C" },
+          900: { value: "#6E3A0E" },
+          950: { value: "#3E1F05" },
         },
         gray: {
           50: { value: "#F8F7F6" },
@@ -149,8 +150,8 @@ const config = defineConfig({
           900: { value: "#1A1715" },
           950: { value: "#0F0D0C" },
         },
-        // Illustration-only accent (never used for text).
-        sun: { value: "#FFC24D" },
+        // Illustration-only accent (never used for text): sunny yellow.
+        sun: { value: "#FFC93C" },
       },
       fonts: {
         // Outfit everywhere; Bricolage Grotesque only for the "imara" wordmark.
@@ -174,8 +175,8 @@ const config = defineConfig({
           fg: { value: { _light: "{colors.brand.700}", _dark: "{colors.brand.400}" } },
           // Dark tints are kept low-saturation so orange areas don't turn into
           // heavy brown blocks.
-          muted: { value: { _light: "{colors.brand.100}", _dark: "#3A1F0F" } },
-          subtle: { value: { _light: "{colors.brand.50}", _dark: "#1F150E" } },
+          muted: { value: { _light: "{colors.brand.100}", _dark: "#3A2510" } },
+          subtle: { value: { _light: "{colors.brand.50}", _dark: "#20160C" } },
           emphasized: { value: { _light: "{colors.brand.200}", _dark: "{colors.brand.800}" } },
           focusRing: { value: { _light: "{colors.brand.500}", _dark: "{colors.brand.400}" } },
         },

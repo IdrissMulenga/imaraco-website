@@ -45,10 +45,10 @@ export async function CTASection({
             px={{ base: "6", md: "14" }}
             py={{ base: "10", md: "16" }}
             bgImage={{
-              _light: "linear-gradient(135deg, #B44C0D 0%, #8F3D10 55%, #5C2408 100%)",
-              _dark: "linear-gradient(135deg, #8F3D10 0%, #5C2408 60%, #2E1405 100%)",
+              _light: "linear-gradient(135deg, #C2650B 0%, #964C0C 55%, #5F2F07 100%)",
+              _dark: "linear-gradient(135deg, #964C0C 0%, #5F2F07 60%, #301804 100%)",
             }}
-            boxShadow="0 40px 80px -40px rgba(180,76,13,.55)"
+            boxShadow="0 40px 80px -40px rgba(194,101,11,.55)"
           >
             {/* Decoration */}
             <Box
@@ -60,8 +60,8 @@ export async function CTASection({
               bgSize="22px 22px"
               css={{ maskImage: "linear-gradient(to left, black, transparent 60%)" }}
             />
-            <Box aria-hidden="true" position="absolute" top="-30%" right="-10%" boxSize="96" borderRadius="full" bg="#F37421" opacity={0.55} filter="blur(90px)" />
-            <Box aria-hidden="true" position="absolute" bottom="-40%" left="20%" boxSize="80" borderRadius="full" bg="#FFC24D" opacity={0.18} filter="blur(90px)" />
+            <Box aria-hidden="true" position="absolute" top="-30%" right="-10%" boxSize="96" borderRadius="full" bg="#F7931E" opacity={0.55} filter="blur(90px)" />
+            <Box aria-hidden="true" position="absolute" bottom="-40%" left="20%" boxSize="80" borderRadius="full" bg="#FFC93C" opacity={0.18} filter="blur(90px)" />
             <Box
               aria-hidden="true"
               position="absolute"
@@ -99,8 +99,8 @@ export async function CTASection({
                     asChild
                     size="lg"
                     bg="white"
-                    color="#8F3D10"
-                    _hover={{ bg: "#FFF4EC", transform: "translateY(-2px)" }}
+                    color="#964C0C"
+                    _hover={{ bg: "#FFF7EB", transform: "translateY(-2px)" }}
                     boxShadow="0 10px 24px -10px rgba(0,0,0,.4)"
                   >
                     <a href={whatsappLink(whatsappMessage)} target="_blank" rel="noopener noreferrer">
@@ -146,7 +146,7 @@ export async function CTASection({
                           "@media (prefers-reduced-motion: reduce)": { transition: "none", "&:hover": { transform: "none" } },
                         }}
                       >
-                        <Circle size="9" bg="white" color="#8F3D10" fontWeight="bold" flexShrink={0}>
+                        <Circle size="9" bg="white" color="#964C0C" fontWeight="bold" flexShrink={0}>
                           {i + 1}
                         </Circle>
                         <Box>

@@ -5,6 +5,8 @@
 export const site = {
   name: "Imara Company Limited",
   shortName: "Imara",
+  // The name we want people (and Google) to use: page titles, search results.
+  brand: "Imara Company",
   tagline: "Technology built to last.",
   url:
     process.env.NEXT_PUBLIC_SITE_URL ??

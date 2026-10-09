@@ -57,10 +57,10 @@ export const servicePalette: Record<
     border: { light: "#FBCFE8", dark: "#5A1B3B" },
   },
   training: {
-    icon: ["#FB923C", "#C2410C"],
-    soft: { light: ["#FFF7ED", "#FFEDD5"], dark: ["#221408", "#2E1A0A"] },
-    text: { light: "#C2410C", dark: "#FDBA74" },
-    border: { light: "#FED7AA", dark: "#5A2E10" },
+    icon: ["#F9A43A", "#C2650B"],
+    soft: { light: ["#FFF7EB", "#FEEBCC"], dark: ["#221608", "#2E1D0A"] },
+    text: { light: "#A85A09", dark: "#FCC77A" },
+    border: { light: "#FDD496", dark: "#5A3810" },
   },
 };
 

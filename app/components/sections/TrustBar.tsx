@@ -22,7 +22,7 @@ import { getI18n } from "@/i18n/server";
 type TrustKey = Exclude<keyof Dictionary["trust"], "label">;
 
 const items: { icon: React.ReactNode; key: TrustKey; color: string }[] = [
-  { icon: <PiMapPinDuotone />, key: "local", color: "#F37421" },
+  { icon: <PiMapPinDuotone />, key: "local", color: "#F7931E" },
   { icon: <PiSparkleDuotone />, key: "ai", color: "#7C3AED" },
   { icon: <PiDevicesDuotone />, key: "platforms", color: "#0369A1" },
   { icon: <PiWifiSlashDuotone />, key: "offline", color: "#0E7490" },

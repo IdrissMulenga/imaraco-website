@@ -38,12 +38,12 @@ export const en = {
   },
 
   meta: {
-    siteTitle: "Imara: Technology built to last",
+    siteTitle: "Imara Company: Technology built to last",
     siteDescription:
       "Imara Company Limited builds software products and offers software services: websites, web and mobile apps, AI solutions and help-desk support.",
-    homeTitle: "Imara: Build it. Run it. Fix it.",
+    homeTitle: "Imara Company: Build it. Run it. Fix it.",
     homeDescription:
-      "Websites, web apps and mobile apps for businesses, our own software products, and friendly help-desk support for laptops and phones.",
+      "Imara Company builds websites, web apps and mobile apps for businesses, creates its own software products, and offers friendly help-desk support for laptops and phones.",
     productsTitle: "Products",
     productsDescription:
       "Imara Afya, Duka POS, School Management System and Imara Pay: software products built for real-world conditions.",

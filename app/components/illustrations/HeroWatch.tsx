@@ -124,7 +124,7 @@ export async function HeroWatch() {
         </Box>
         <Box position="absolute" bottom={{ base: "6%", md: "8%" }} left={{ base: "0", md: "-4%" }}>
           <Float delay={2}>
-            <Chip icon={<PiSparkleDuotone />} color={["#F7883F", "#B44C0D"]} title={t.hero.chipBand} text={t.common.comingSoon} />
+            <Chip icon={<PiSparkleDuotone />} color={["#F9A43A", "#C2650B"]} title={t.hero.chipBand} text={t.common.comingSoon} />
           </Float>
         </Box>
       </Box>
