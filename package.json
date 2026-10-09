@@ -6,16 +6,34 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "typecheck": "next typegen && tsc --noEmit",
+    "theme:typegen": "chakra typegen app/theme/index.ts",
+    "postinstall": "patch-package && chakra typegen app/theme/index.ts"
   },
   "dependencies": {
+    "@chakra-ui/react": "^3.37.0",
+    "@emotion/cache": "^11.14.0",
+    "@emotion/react": "^11.14.0",
+    "@hookform/resolvers": "^5.9.1",
+    "framer-motion": "^14.0.0",
     "next": "16.4.0",
     "react": "19.3.0",
-    "react-dom": "19.3.0"
+    "react-dom": "19.3.0",
+    "react-hook-form": "^7.89.0",
+    "react-icons": "^5.7.0",
+    "server-only": "^0.0.1",
+    "zod": "^4.6.5"
   },
   "devDependencies": {
+    "@chakra-ui/cli": "^3.37.0",
+    "@types/node": "^26.6.4",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
     "eslint": "^9",
-    "eslint-config-next": "16.4.0"
+    "eslint-config-next": "16.4.0",
+    "patch-package": "^8.0.1",
+    "typescript": "^6"
   },
   "packageManager": "yarn@1.22.22"
 }
