@@ -16,13 +16,7 @@ export type ActionResult =
   | { ok: true }
   | { ok: false; error: "invalid" | "rateLimited" | "server" };
 
-/**
- * Contact, quote, pilot and Imara Pay order form:
- * 1. checks the data and spam traps,
- * 2. emails the message to your inbox (reply goes straight to the visitor),
- * 3. sends the visitor a confirmation in their language (our text only,
- *    and at most 2 per address per 10 minutes, so it can't be used for spam).
- */
+
 export async function submitContact(input: unknown): Promise<ActionResult> {
   const parsed = contactSchema.safeParse(input);
   if (!parsed.success) {
