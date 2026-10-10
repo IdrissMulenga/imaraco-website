@@ -57,15 +57,28 @@ function SideButton({
   );
 }
 
-function Screenshot({ screen, eager, decorative }: { screen: AfyaScreen; eager: boolean; decorative: boolean }) {
+function Screenshot({
+  screen,
+  eager,
+  decorative,
+  sizes,
+}: {
+  screen: AfyaScreen;
+  eager: boolean;
+  decorative: boolean;
+  sizes: string;
+}) {
   const shot = afyaScreens[screen];
   return (
     <Image
       src={shot.src}
       alt={decorative ? "" : shot.alt}
       fill
-      sizes="(max-width: 768px) 45vw, 260px"
+      sizes={sizes}
+      // The hero phone is the page's largest image (LCP): load it first, at
+      // high priority. Other screenshots load when scrolled near.
       loading={eager ? "eager" : "lazy"}
+      fetchPriority={eager ? "high" : undefined}
       style={{ objectFit: "cover", objectPosition: "top" }}
     />
   );
@@ -77,6 +90,7 @@ export function AfyaPhone({
   device = "iphone",
   eager = false,
   decorative = true,
+  sizes = "(max-width: 768px) 45vw, 260px",
 }: {
   width?: string;
   screen?: AfyaScreen;
@@ -86,6 +100,8 @@ export function AfyaPhone({
   eager?: boolean;
   /** true when a parent already describes the picture (role="img"). */
   decorative?: boolean;
+  /** How wide the screen shows, so the browser downloads a fitting size. */
+  sizes?: string;
 }) {
   const isIphone = device === "iphone";
   const finish = isIphone ? titanium : pixelAluminium;
@@ -128,7 +144,7 @@ export function AfyaPhone({
               aspectRatio={ratio}
               bg="black"
             >
-              <Screenshot screen={screen} eager={eager} decorative={decorative} />
+              <Screenshot screen={screen} eager={eager} decorative={decorative} sizes={sizes} />
               {isIphone ? (
                 // Dynamic Island
                 <Box

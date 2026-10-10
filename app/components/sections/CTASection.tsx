@@ -129,9 +129,8 @@ export async function CTASection({
               {steps && (
                 <Stack as="ol" listStyleType="none" gap="3">
                   {steps.map((step, i) => (
-                    <Reveal key={step.title} delay={0.12 + i * 0.1}>
+                    <Reveal as="li" key={step.title} delay={0.12 + i * 0.1}>
                       <HStack
-                        as="li"
                         align="flex-start"
                         gap="4"
                         p="4"

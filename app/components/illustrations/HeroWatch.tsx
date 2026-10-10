@@ -6,7 +6,7 @@ import { getI18n } from "@/i18n/server";
 
 /**
  * Homepage hero picture: the Imara Afya Band mockup
- * (public/products/imara-afya/watch.webp), floating over soft rings and a
+ * (public/products/imara-afya/band.webp), floating over soft rings and a
  * warm glow, with small floating info chips around it.
  */
 
@@ -93,15 +93,15 @@ export async function HeroWatch() {
             <Box
               position="relative"
               w={{ base: "14rem", md: "16.5rem" }}
-              aspectRatio="720 / 971"
+              aspectRatio="640 / 820"
               transform="rotate(-6deg)"
               filter="drop-shadow(0 40px 40px rgba(0,0,0,.35))"
             >
               <Image
-                src="/products/imara-afya/watch.webp"
+                src="/products/imara-afya/band.webp"
                 alt=""
                 fill
-                sizes="(max-width: 768px) 240px, 304px"
+                sizes="(max-width: 768px) 224px, 264px"
                 loading="eager"
                 style={{ objectFit: "contain" }}
               />
@@ -119,7 +119,7 @@ export async function HeroWatch() {
         </Box>
         <Box position="absolute" top="46%" right={{ base: "-2%", md: "-12%" }} display={{ base: "none", sm: "block" }}>
           <Float delay={1.3}>
-            <Chip icon={<PiArrowsClockwiseDuotone />} color={["#4A90E2", "#205CAA"]} title={t.hero.chipSync} text="Imara Afya" />
+            <Chip icon={<PiArrowsClockwiseDuotone />} color={["#4A90E2", "#205CAA"]} title={t.hero.chipSync} text={t.hero.chipSyncText} />
           </Float>
         </Box>
         <Box position="absolute" bottom={{ base: "6%", md: "8%" }} left={{ base: "0", md: "-4%" }}>

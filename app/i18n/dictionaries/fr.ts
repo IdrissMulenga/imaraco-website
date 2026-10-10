@@ -78,10 +78,11 @@ export const fr: Dictionary = {
     text: "Imara, c'est une seule équipe pour tout ce qui touche au logiciel. Nous créons des sites web, des applications web et mobiles pour les entreprises, développons nos propres produits, et assurons le bon fonctionnement de vos ordinateurs et téléphones grâce à une assistance accueillante.",
     ctaPrimary: "Découvrir nos produits",
     ctaSecondary: "Travailler avec nous",
-    watchAlt: "Le bracelet Imara Afya, un bracelet connecté affichant 2 031 pas sur 8 500, bientôt disponible.",
-    chipSteps: "2 031 pas",
-    chipStepsText: "sur 8 500 aujourd'hui",
-    chipSync: "Synchronisé avec l'appli",
+    watchAlt: "Le bracelet Imara Afya, un bracelet connecté sans écran au bracelet tissé, bientôt disponible.",
+    chipSteps: "Suit votre journée",
+    chipStepsText: "Mêmes fonctionnalités que l'appli",
+    chipSync: "Synchronisation fluide",
+    chipSyncText: "Avec l'appli Imara Afya",
     chipBand: "Bracelet Imara Afya",
   },
 
@@ -219,7 +220,7 @@ export const fr: Dictionary = {
       "Mode clair et sombre",
     ],
     bandTitle: "Bientôt : le bracelet Imara Afya.",
-    bandText: "Un bracelet connecté avec écran, relié à l'application, pour suivre votre journée directement au poignet.",
+    bandText: "Un bracelet sans écran qui suit votre journée et l'envoie à l'application, où vous retrouvez tout.",
     notifyPrompt: "Soyez parmi les premiers informés du lancement :",
     disclaimerTitle: "Pas un avis médical",
     disclaimer:
@@ -261,8 +262,8 @@ export const fr: Dictionary = {
   band: {
     eyebrow: "Bientôt disponible",
     title: "Bracelet Imara Afya",
-    text: "Notre premier objet connecté : un bracelet intelligent avec écran qui fonctionne avec l'application Imara Afya, pour suivre votre journée directement au poignet.",
-    points: ["Vos pas directement au poignet", "Synchronisé avec l'application Imara Afya", "Pensé pour être porté au quotidien"],
+    text: "Notre premier objet connecté : un bracelet intelligent sans écran qui fonctionne avec l'application Imara Afya. Portez-le toute la journée ; vos résultats s'affichent dans l'application, avec les mêmes fonctionnalités que vous utilisez déjà.",
+    points: ["Design discret et léger", "Vos résultats dans l'application Imara Afya", "Pensé pour être porté au quotidien"],
     notify: "Soyez parmi les premiers informés du lancement :",
     partOf: "Fait partie d'Imara Afya",
     connector: "Fonctionne avec l'application Imara Afya",
@@ -517,6 +518,190 @@ export const fr: Dictionary = {
     ctaSubtitle: "Dites-nous ce dont vous avez besoin et nous répondrons avec les prochaines étapes et un devis.",
     ctaSecondary: "Utiliser le formulaire",
     whatsappMessage: "Bonjour Imara, je souhaite un devis pour un projet.",
+  },
+
+  // Une page par service (« /services/ai », etc.). Libellés communs :
+  servicePage: {
+    back: "Tous les services",
+    eyebrow: "Service",
+    quote: "Demander un devis",
+    seeOffer: "Ce que nous faisons",
+    whyEyebrow: "Pourquoi c'est important",
+    whyTitle: "Pourquoi vous en avez besoin",
+    offerEyebrow: "Ce que nous faisons",
+    offerTitle: "Ce que nous pouvons faire pour vous",
+    benefitsEyebrow: "Avantages",
+    benefitsTitle: "Ce que vous y gagnez",
+    otherEyebrow: "Plus",
+    otherTitle: "Nos autres services",
+    ctaTitle: "Parlons de votre projet",
+    ctaSubtitle: "Dites-nous ce dont vous avez besoin et nous répondrons avec les prochaines étapes et un devis.",
+    whatsappMessage: "Bonjour Imara, je suis intéressé(e) par : {name}.",
+  },
+
+  // Détails de chaque page service. Mêmes identifiants que « services ».
+  serviceDetails: {
+    ai: {
+      intro:
+        "L'IA peut répondre à vos clients, trier des documents et gérer les tâches répétitives à toute heure. Nous vous aidons à repérer où elle fait vraiment gagner du temps dans votre activité, puis nous la mettons en place, la connectons à vos outils et formons votre équipe à l'utiliser en toute sécurité.",
+      why: [
+        { title: "Votre équipe répète les mêmes tâches", text: "Répondre aux mêmes questions, recopier des données, rédiger des rapports similaires : ce travail peut être automatisé pour que chacun se concentre sur ce qui demande un humain." },
+        { title: "Vos clients attendent des réponses rapides", text: "Les gens écrivent à toute heure. Un assistant sur votre site ou WhatsApp répond tout de suite et transmet les cas complexes à votre équipe." },
+        { title: "L'IA évolue vite", text: "De nouveaux outils sortent chaque mois. Nous vous aidons à choisir ceux qui conviennent à votre activité, sans mettre vos données en danger." },
+      ],
+      offer: [
+        { title: "Chatbots pour votre site et WhatsApp", text: "Des assistants qui répondent aux questions sur vos produits, services et horaires, dans la langue de vos clients." },
+        { title: "L'IA dans vos applications", text: "Recherche, résumés, aide à la rédaction ou lecture de documents, avec des modèles comme Claude et GPT." },
+        { title: "Automatisation des documents et données", text: "Extraire les informations de factures, formulaires et rapports, et remplir automatiquement vos tableaux ou systèmes." },
+        { title: "Automatisation des processus", text: "Relier les outils que vous utilisez déjà pour que relances, rappels et rapports se fassent tout seuls." },
+        { title: "Audit et conseil en IA", text: "Nous analysons votre façon de travailler et vous montrons où l'IA ferait gagner du temps, et où elle ne servirait pas." },
+        { title: "Formation à un usage sûr de l'IA", text: "Des sessions pratiques pour que votre équipe utilise bien les outils d'IA et protège les informations sensibles." },
+      ],
+      benefits: [
+        { title: "Gagnez du temps", text: "Les tâches courantes se font en quelques secondes, et votre équipe se consacre aux clients et à la croissance." },
+        { title: "Répondez plus vite", text: "Vos clients obtiennent une réponse à toute heure, pas seulement pendant les heures de bureau." },
+        { title: "Un travail régulier", text: "Les étapes automatisées suivent toujours les mêmes règles, avec une vérification humaine là où c'est important." },
+        { title: "Grandir sans surcharge", text: "Traitez plus de demandes et plus de clients sans autant de travail manuel en plus." },
+      ],
+    },
+    web: {
+      intro:
+        "Votre site web est souvent le premier contact avec votre entreprise. Nous concevons et développons des sites et applications web rapides et sécurisés, qui expliquent ce que vous faites, fonctionnent bien sur téléphone et vous apportent de vraies demandes.",
+      why: [
+        { title: "On vous cherche d'abord en ligne", text: "Avant d'appeler ou de passer, les clients vous cherchent sur internet. Sans site clair, ils risquent de choisir quelqu'un d'autre." },
+        { title: "Les réseaux sociaux ne suffisent pas", text: "Une page sur un réseau social peut disparaître ou changer de règles. Votre site et votre nom de domaine vous appartiennent." },
+        { title: "Le papier et les tableurs vous ralentissent", text: "Une application web peut remplacer le travail manuel : commandes, réservations, dossiers et rapports au même endroit, accessibles partout." },
+      ],
+      offer: [
+        { title: "Sites d'entreprise", text: "Un site professionnel qui présente clairement votre activité, vos services et vos coordonnées." },
+        { title: "Pages de destination", text: "Des pages ciblées pour un lancement, une campagne ou un événement, conçues pour transformer les visiteurs en demandes." },
+        { title: "Applications web et tableaux de bord", text: "Des outils sur mesure pour votre équipe : portails clients, réservations, tableaux de bord internes, etc." },
+        { title: "E-commerce et commande en ligne", text: "Vos clients consultent, commandent et paient en ligne, avec des moyens de paiement adaptés à votre marché." },
+        { title: "Multilingue et optimisé SEO", text: "Des sites en plusieurs langues, construits pour être trouvés et affichés par les moteurs de recherche." },
+        { title: "Hébergement, mises à jour et suivi", text: "Nous mettons votre site en ligne sur votre propre domaine et le gardons sécurisé et à jour." },
+      ],
+      benefits: [
+        { title: "Être trouvé", text: "Apparaissez quand les gens cherchent ce que vous proposez." },
+        { title: "Inspirer confiance", text: "Un site clair et moderne crée la confiance avant même le premier échange." },
+        { title: "Sur tous les écrans", text: "Rapide sur téléphone, tablette et ordinateur, même avec une connexion lente." },
+        { title: "Ouvert jour et nuit", text: "Votre site présente votre activité et reçoit des demandes à toute heure." },
+      ],
+    },
+    mobile: {
+      intro:
+        "Une application mobile met votre service dans la poche de vos clients. Nous créons des applications Android et iOS à partir d'un seul code, pensées pour les téléphones courants, les réseaux lents et les moyens de paiement que les gens utilisent vraiment.",
+      why: [
+        { title: "Vos clients vivent sur leur téléphone", text: "Pour beaucoup, le téléphone est le principal ordinateur. Une application leur permet de vous joindre en un geste." },
+        { title: "La connexion n'est pas toujours fiable", text: "Une application peut fonctionner hors ligne et se synchroniser au retour du réseau : le travail ne s'arrête pas." },
+        { title: "Le paiement mobile est partout", text: "Grâce au mobile money, vos clients vous paient directement depuis l'application." },
+      ],
+      offer: [
+        { title: "Applications Android et iOS", text: "Un seul code React Native pour les deux plateformes : lancement plus rapide, maintenance réduite." },
+        { title: "Conçues pour le hors-ligne", text: "Les données sont enregistrées sur le téléphone et synchronisées en arrière-plan dès qu'une connexion est disponible." },
+        { title: "Mobile money et paiements", text: "Intégration des services de mobile money et de paiement par carte, là où ils sont disponibles." },
+        { title: "Notifications", text: "Rappels, nouveautés et alertes qui ramènent les utilisateurs au bon moment." },
+        { title: "Tableau de bord et backend", text: "Un tableau de bord web pour gérer les utilisateurs, le contenu et les données de votre application." },
+        { title: "Publication et mises à jour", text: "Nous préparons vos fiches, publions sur Google Play et l'App Store, et livrons les mises à jour." },
+      ],
+      benefits: [
+        { title: "Plus proche de vos clients", text: "Votre service est à un geste, sur l'appareil qu'ils utilisent le plus." },
+        { title: "Fiable en conditions réelles", text: "Conçue et testée pour les téléphones d'entrée de gamme et les réseaux instables." },
+        { title: "Un développement, deux plateformes", text: "Touchez les utilisateurs Android et iPhone sans créer deux applications séparées." },
+        { title: "Prête à évoluer", text: "Ajoutez des fonctionnalités au fil du temps, au rythme de vos utilisateurs et de votre activité." },
+      ],
+    },
+    support: {
+      intro:
+        "Quand un logiciel ne fonctionne plus, le travail s'arrête aussi. Notre assistance remet ordinateurs et téléphones en état : correction d'erreurs, configuration de comptes et d'applications, et explications simples, pour les particuliers comme pour les équipes.",
+      why: [
+        { title: "Les pannes tombent toujours mal", text: "Un plantage avant une échéance ou un compte inaccessible fait perdre des heures. Une aide rapide vous remet au travail." },
+        { title: "Tout le monde n'a pas de service informatique", text: "Les petites entreprises et les particuliers ont rarement quelqu'un à appeler. Nous pouvons être ce contact." },
+        { title: "Les petits soucis deviennent grands", text: "Logiciels obsolètes, mots de passe faibles et absence de sauvegardes peuvent entraîner des pertes de données et des problèmes de sécurité." },
+      ],
+      offer: [
+        { title: "Correction d'erreurs et de plantages", text: "Nous trouvons pourquoi une application ou un système se comporte mal, et nous le réparons." },
+        { title: "Accélérer les appareils lents", text: "Nettoyage, mises à jour et réglages des ordinateurs et téléphones devenus lents." },
+        { title: "Installation et mise à jour de logiciels", text: "Installation des programmes dont vous avez besoin, avec licences et mises à jour bien gérées." },
+        { title: "Configuration e-mail et comptes", text: "E-mail professionnel, comptes cloud et applications configurés sur tous vos appareils." },
+        { title: "Sécurité de base", text: "Antivirus, mots de passe solides, validation en deux étapes et sauvegardes pour protéger vos données." },
+        { title: "Aide à distance ou sur place", text: "Nous intervenons à distance dès que possible, et sur place quand c'est nécessaire." },
+      ],
+      benefits: [
+        { title: "Moins d'interruptions", text: "Les problèmes sont réglés vite, pour que vous repreniez le travail." },
+        { title: "Des explications simples", text: "Nous vous disons ce qui s'est passé et comment l'éviter, sans jargon." },
+        { title: "Des données mieux protégées", text: "De bonnes habitudes et des sauvegardes protègent vos fichiers et vos comptes." },
+        { title: "Un seul contact", text: "Écrivez-nous sur WhatsApp ou par e-mail dès que quelque chose ne va pas." },
+      ],
+    },
+    backend: {
+      intro:
+        "Derrière chaque bonne application, il y a un backend fiable. Nous concevons API et bases de données, connectons vos systèmes aux services de paiement et partenaires, et gérons votre infrastructure pour qu'elle reste rapide, sécurisée et en ligne.",
+      why: [
+        { title: "Vos systèmes ne communiquent pas", text: "Saisir les mêmes données dans plusieurs outils fait perdre du temps et crée des erreurs. Les API les relient." },
+        { title: "Votre application ralentit", text: "Quand les utilisateurs augmentent, une base de données ou un serveur fragile devient le point faible. Un backend solide garde tout rapide." },
+        { title: "Les pannes coûtent la confiance", text: "Quand une application est hors ligne, les clients le remarquent. La surveillance et des mises en production soignées la gardent disponible." },
+      ],
+      offer: [
+        { title: "API REST et GraphQL", text: "Des API propres et documentées pour vos applications web et mobiles, ou pour vos partenaires." },
+        { title: "Conception de bases de données", text: "Des structures de données rapides et cohérentes, et des migrations sûres depuis vos anciens systèmes." },
+        { title: "Intégrations de paiement et services tiers", text: "Connexions aux services de paiement, SMS, e-mail et autres outils dont votre activité dépend." },
+        { title: "Hébergement cloud", text: "Serveurs et services cloud mis en place et gérés selon vos besoins et votre budget." },
+        { title: "CI/CD et mises en production", text: "Tests et déploiements automatisés pour publier des mises à jour souvent et sans risque." },
+        { title: "Surveillance et sauvegardes", text: "Alertes, journaux et sauvegardes régulières pour détecter les problèmes tôt et pouvoir restaurer les données." },
+      ],
+      benefits: [
+        { title: "Fiable", text: "Vos applications restent disponibles quand on en a besoin." },
+        { title: "Sécurisé", text: "Contrôle d'accès, chiffrement et bonnes pratiques protègent vos données et vos utilisateurs." },
+        { title: "Prêt à grandir", text: "Conçu pour accueillir plus d'utilisateurs sans tout recommencer." },
+        { title: "Connecté", text: "Vos outils et partenaires échangent leurs données automatiquement." },
+      ],
+    },
+    design: {
+      intro:
+        "Un bon design rend un logiciel facile à utiliser et une marque facile à retenir. Nous concevons des interfaces web et mobiles comprises dès la première utilisation, ainsi que des logos et visuels qui donnent à votre entreprise une image cohérente.",
+      why: [
+        { title: "Une application confuse perd ses utilisateurs", text: "Si les gens ne trouvent pas vite ce qu'ils cherchent, ils abandonnent. Un design clair les retient." },
+        { title: "La première impression compte", text: "Un logo et des visuels professionnels montrent à vos clients que vous prenez votre activité au sérieux." },
+        { title: "Corriger le design après coûte plus cher", text: "Tester les idées avec des maquettes avant le développement évite des changements coûteux après le lancement." },
+      ],
+      offer: [
+        { title: "Recherche utilisateur", text: "Nous parlons à vos utilisateurs et observons leur façon de travailler pour comprendre leurs vrais besoins." },
+        { title: "Maquettes et prototypes", text: "Des maquettes cliquables à valider et tester avant d'écrire la moindre ligne de code." },
+        { title: "Design d'interfaces web et mobiles", text: "Des écrans clairs et accessibles, prêts pour les développeurs." },
+        { title: "Systèmes de design", text: "Couleurs, polices et composants réutilisables pour que chaque écran reste cohérent." },
+        { title: "Logos et identité de marque", text: "Un logo, une palette de couleurs et une typographie qui vous ressemblent." },
+        { title: "Réseaux sociaux et print", text: "Publications, flyers, affiches et présentations aux couleurs de votre marque." },
+      ],
+      benefits: [
+        { title: "Plus simple à utiliser", text: "Moins de questions, plus de personnes qui vont au bout de ce qu'elles voulaient faire." },
+        { title: "Une marque cohérente", text: "La même image sur votre application, votre site, vos réseaux sociaux et vos imprimés." },
+        { title: "Un développement plus rapide", text: "Des designs clairs, c'est moins de surprises et de changements pendant le développement." },
+        { title: "Accessible à tous", text: "Texte lisible, bon contraste et mise en page claire pour tous les utilisateurs." },
+      ],
+    },
+    training: {
+      intro:
+        "Un logiciel n'est utile que si l'on sait s'en servir. Nous proposons des formations pratiques pour les équipes et des cours de programmation pour débutants, sur place ou en ligne, à un rythme adapté au groupe.",
+      why: [
+        { title: "Nouveaux outils, nouvelles compétences", text: "Les équipes n'utilisent souvent qu'une partie des logiciels qu'elles paient. La formation libère le reste." },
+        { title: "Le numérique ouvre des portes", text: "Apprendre à coder développe la résolution de problèmes et mène à de nouveaux emplois et projets." },
+        { title: "Apprendre seul est difficile", text: "Les vidéos aident, mais un formateur qui répond à vos questions fait progresser bien plus vite." },
+      ],
+      offer: [
+        { title: "Formation logicielle pour le personnel", text: "Des sessions sur les outils du quotidien : bureautique, e-mail, applications cloud et vos propres systèmes." },
+        { title: "Formation sur ce que nous livrons", text: "Chaque système que nous livrons s'accompagne d'une formation, pour une équipe à l'aise dès le premier jour." },
+        { title: "Cours de programmation pour débutants", text: "Les premiers pas en programmation, sans aucune expérience requise." },
+        { title: "Cours de développement web", text: "HTML, CSS, JavaScript et frameworks modernes, appris à travers de vrais projets." },
+        { title: "Cours de développement mobile", text: "Créer des applications Android et iOS, de l'idée à l'application fonctionnelle." },
+        { title: "Sur place ou en ligne", text: "Cours dans vos locaux ou en ligne, en groupe ou en individuel." },
+      ],
+      benefits: [
+        { title: "Des équipes à l'aise", text: "Chacun utilise pleinement ses outils et a moins besoin d'aide." },
+        { title: "Apprendre en pratiquant", text: "Des exercices et des projets, pas seulement des diapositives." },
+        { title: "Adapté à votre niveau", text: "Des grands débutants à ceux qui veulent aller plus loin." },
+        { title: "Des compétences utiles tout de suite", text: "Des connaissances pratiques pour le travail ou vos propres projets." },
+      ],
+    },
   },
 
   labs: {

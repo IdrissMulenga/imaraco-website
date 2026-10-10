@@ -77,10 +77,11 @@ export const en = {
     text: "Imara is one team for all things software. We build websites, web apps and mobile apps for businesses, create our own products, and keep your laptops and phones running with friendly help-desk support.",
     ctaPrimary: "Explore our products",
     ctaSecondary: "Work with us",
-    watchAlt: "The Imara Afya Band, a smart band showing 2,031 of 8,500 steps, coming soon.",
-    chipSteps: "2,031 steps",
-    chipStepsText: "of 8,500 today",
-    chipSync: "Syncs with the app",
+    watchAlt: "The Imara Afya Band, a screenless smart band with a woven strap, coming soon.",
+    chipSteps: "Tracks your day",
+    chipStepsText: "Same features as the app",
+    chipSync: "Seamless sync",
+    chipSyncText: "With the Imara Afya app",
     chipBand: "Imara Afya Band",
   },
 
@@ -219,7 +220,7 @@ export const en = {
       "Light & dark mode",
     ],
     bandTitle: "Coming soon: the Imara Afya Band.",
-    bandText: "A wearable with a screen that connects to the app, so your day is tracked right from your wrist.",
+    bandText: "A screenless band that tracks your day and sends it to the app, where you see everything.",
     notifyPrompt: "Be the first to know when it launches:",
     disclaimerTitle: "Not medical advice",
     disclaimer:
@@ -262,8 +263,8 @@ export const en = {
   band: {
     eyebrow: "Coming soon",
     title: "Imara Afya Band",
-    text: "Our first wearable: a smart band with a screen that works with the Imara Afya app, so you can follow your day right from your wrist.",
-    points: ["See your steps right on your wrist", "Syncs with the Imara Afya app", "Designed for everyday wear"],
+    text: "Our first wearable: a screenless smart band that works with the Imara Afya app. Wear it all day; your results appear in the app, with the same features you already use.",
+    points: ["Discreet, lightweight design", "Your results appear in the Imara Afya app", "Designed for everyday wear"],
     notify: "Be the first to know when it launches:",
     partOf: "Part of Imara Afya",
     connector: "Works together with the Imara Afya app",
@@ -518,6 +519,190 @@ export const en = {
     ctaSubtitle: "Tell us what you need and we'll reply with next steps and a quote.",
     ctaSecondary: "Use the contact form",
     whatsappMessage: "Hello Imara, I'd like a quote for a project.",
+  },
+
+  // One page per service ("/services/ai" etc.). Shared labels:
+  servicePage: {
+    back: "All services",
+    eyebrow: "Service",
+    quote: "Request a quote",
+    seeOffer: "What we do",
+    whyEyebrow: "Why it matters",
+    whyTitle: "Why you need it",
+    offerEyebrow: "What we do",
+    offerTitle: "What we can do for you",
+    benefitsEyebrow: "Benefits",
+    benefitsTitle: "What you gain",
+    otherEyebrow: "More",
+    otherTitle: "Other services",
+    ctaTitle: "Let's talk about your project",
+    ctaSubtitle: "Tell us what you need and we'll reply with next steps and a quote.",
+    whatsappMessage: "Hello Imara, I'm interested in {name}.",
+  },
+
+  // Details for each service page. Same ids as "services" above.
+  serviceDetails: {
+    ai: {
+      intro:
+        "AI can answer customers, sort documents and handle routine work around the clock. We help you find where it really saves time in your business, then build it, connect it to your tools and train your team to use it safely.",
+      why: [
+        { title: "Your team repeats the same tasks", text: "Answering the same questions, copying data between files, writing similar reports: this work can be automated so people focus on what needs a human." },
+        { title: "Customers expect quick answers", text: "People message at any hour. An assistant on your website or WhatsApp can reply instantly and pass complex cases to your team." },
+        { title: "AI is moving fast", text: "New tools appear every month. We help you choose what fits your business and use it without putting your data at risk." },
+      ],
+      offer: [
+        { title: "Chatbots for your website and WhatsApp", text: "Assistants that answer questions about your products, services and opening hours, in your customers' language." },
+        { title: "AI inside your apps", text: "Search, summaries, writing help or document reading, built with models such as Claude and GPT." },
+        { title: "Document and data automation", text: "Pull information from invoices, forms and reports, and fill your spreadsheets or systems automatically." },
+        { title: "Workflow automation", text: "Connect the tools you already use so follow-ups, reminders and reports run on their own." },
+        { title: "AI audit and advice", text: "We review how you work and show where AI would save time, and where it wouldn't." },
+        { title: "Training on safe AI use", text: "Practical sessions so your team uses AI tools well and keeps sensitive information private." },
+      ],
+      benefits: [
+        { title: "Save time", text: "Routine work gets done in seconds, freeing your team for customers and growth." },
+        { title: "Answer faster", text: "Customers get replies at any hour, not only during office time." },
+        { title: "Consistent work", text: "Automated steps follow the same rules every time, with a person checking where it matters." },
+        { title: "Grow without extra load", text: "Handle more requests and more customers without the same increase in manual work." },
+      ],
+    },
+    web: {
+      intro:
+        "Your website is often the first place people meet your business. We design and build fast, secure websites and web apps that explain what you do, work well on phones and bring you real enquiries.",
+      why: [
+        { title: "People look you up online first", text: "Before they call or visit, customers search for you. Without a clear website, they may choose someone they can find." },
+        { title: "Social media isn't enough", text: "A social media page can disappear or change its rules. Your own website and domain belong to you." },
+        { title: "Paper and spreadsheets slow you down", text: "A web app can replace manual work: orders, bookings, records and reports in one place your team can reach from anywhere." },
+      ],
+      offer: [
+        { title: "Company websites", text: "A professional site that presents your business, services and contact details clearly." },
+        { title: "Landing pages", text: "Focused pages for a launch, campaign or event, built to turn visitors into enquiries." },
+        { title: "Web apps and dashboards", text: "Custom tools for your team: client portals, booking systems, internal dashboards and more." },
+        { title: "E-commerce and online ordering", text: "Let customers browse, order and pay online, with payment methods that suit your market." },
+        { title: "Multilingual and SEO-ready", text: "Sites in several languages, built so search engines can find and show them." },
+        { title: "Hosting, updates and care", text: "We put your site online on your own domain and keep it secure and up to date." },
+      ],
+      benefits: [
+        { title: "Be found", text: "Show up when people search for what you offer." },
+        { title: "Look credible", text: "A clear, modern site builds trust before the first conversation." },
+        { title: "Works on every screen", text: "Fast on phones, tablets and computers, even on slower connections." },
+        { title: "Open day and night", text: "Your site presents your business and collects enquiries around the clock." },
+      ],
+    },
+    mobile: {
+      intro:
+        "A mobile app puts your service in your customers' pocket. We build Android and iOS apps from one codebase, designed for everyday phones, slow networks and the payment methods people actually use.",
+      why: [
+        { title: "Your customers live on their phones", text: "For many people the phone is their main computer. An app lets them reach you in one tap." },
+        { title: "Connections aren't always reliable", text: "Apps can keep working offline and sync when the network returns, so work doesn't stop." },
+        { title: "Mobile payments are everywhere", text: "Connecting to mobile money lets customers pay you directly from the app." },
+      ],
+      offer: [
+        { title: "Android and iOS apps", text: "One React Native codebase for both platforms, so you launch faster and maintain less." },
+        { title: "Offline-first design", text: "Data is saved on the phone and synced in the background when a connection is available." },
+        { title: "Mobile money and payments", text: "Integrations with mobile-money and card payment providers where they're available." },
+        { title: "Notifications", text: "Reminders, updates and alerts that bring users back at the right moment." },
+        { title: "Admin dashboard and backend", text: "A web dashboard to manage the users, content and data behind your app." },
+        { title: "Store publishing and updates", text: "We prepare your listings, publish to Google Play and the App Store, and ship updates." },
+      ],
+      benefits: [
+        { title: "Closer to your customers", text: "Your service is one tap away, on the device they use most." },
+        { title: "Works in real conditions", text: "Built and tested for entry-level phones and patchy networks." },
+        { title: "One build, two platforms", text: "Reach Android and iPhone users without building two separate apps." },
+        { title: "Room to grow", text: "Add features over time as your users and your business grow." },
+      ],
+    },
+    support: {
+      intro:
+        "When software stops working, work stops too. Our help desk gets laptops and phones back on track: fixing errors, setting up accounts and apps, and explaining things in plain language, for individuals and business teams.",
+      why: [
+        { title: "Problems never come at a good time", text: "A crash before a deadline or an account you can't open costs hours. Quick help gets you back to work." },
+        { title: "Not everyone has an IT department", text: "Small businesses and individuals rarely have someone to call. We can be that someone." },
+        { title: "Small issues become big ones", text: "Outdated software, weak passwords and missing backups can lead to lost data and security problems." },
+      ],
+      offer: [
+        { title: "Fixing errors and crashes", text: "We find out why an app or system misbehaves, and fix it." },
+        { title: "Speeding up slow devices", text: "Cleaning up, updating and tuning laptops and phones that have become slow." },
+        { title: "Installing and updating software", text: "Setting up the programs you need, with licences and updates handled properly." },
+        { title: "Email and account setup", text: "Business email, cloud accounts and apps set up on all your devices." },
+        { title: "Security basics", text: "Antivirus, strong passwords, two-step verification and backups to protect your data." },
+        { title: "Remote or on-site help", text: "We help remotely whenever possible, and on site when it's needed." },
+      ],
+      benefits: [
+        { title: "Less downtime", text: "Problems get solved quickly so you can get back to work." },
+        { title: "Explained simply", text: "We tell you what went wrong and how to avoid it, without jargon." },
+        { title: "Safer data", text: "Good habits and backups protect your files and accounts." },
+        { title: "One contact for everything", text: "Message us on WhatsApp or by email whenever something goes wrong." },
+      ],
+    },
+    backend: {
+      intro:
+        "Behind every good app is a reliable backend. We design APIs and databases, connect your systems to payment and third-party services, and run your infrastructure so it stays fast, secure and online.",
+      why: [
+        { title: "Your systems don't talk to each other", text: "Typing the same data into different tools wastes time and causes errors. APIs connect them." },
+        { title: "Your app is slowing down", text: "As users grow, a weak database or server becomes the bottleneck. A solid backend keeps things fast." },
+        { title: "Downtime costs trust", text: "When an app goes offline, customers notice. Monitoring and careful releases keep it running." },
+      ],
+      offer: [
+        { title: "REST and GraphQL APIs", text: "Clean, documented APIs for your web and mobile apps, or for your partners." },
+        { title: "Database design", text: "Data structures that stay fast and consistent, plus safe migrations from older systems." },
+        { title: "Payment and third-party integrations", text: "Connections to payment providers, SMS, email and other services your business relies on." },
+        { title: "Cloud hosting", text: "Servers and cloud services set up and managed to fit your needs and budget." },
+        { title: "CI/CD and releases", text: "Automated testing and deployment so updates go out safely and often." },
+        { title: "Monitoring and backups", text: "Alerts, logs and regular backups so problems are caught early and data can be restored." },
+      ],
+      benefits: [
+        { title: "Reliable", text: "Your apps stay available when people need them." },
+        { title: "Secure", text: "Access control, encryption and good practices protect your data and your users." },
+        { title: "Ready to scale", text: "Built to handle more users without starting over." },
+        { title: "Connected", text: "Your tools and partners share data automatically." },
+      ],
+    },
+    design: {
+      intro:
+        "Good design makes software easy to use and your brand easy to remember. We design app and web interfaces people understand on the first try, plus logos and visuals that give your business a consistent look.",
+      why: [
+        { title: "Confusing apps lose users", text: "If people can't find what they need quickly, they give up. Clear design keeps them." },
+        { title: "First impressions count", text: "A professional logo and visuals tell customers you take your business seriously." },
+        { title: "Fixing design later costs more", text: "Testing ideas with wireframes before development avoids expensive changes after launch." },
+      ],
+      offer: [
+        { title: "User research", text: "We talk to your users and watch how they work to understand what they really need." },
+        { title: "Wireframes and prototypes", text: "Clickable mock-ups you can review and test before any code is written." },
+        { title: "App and web interface design", text: "Clean, accessible screens for web and mobile, ready for developers." },
+        { title: "Design systems", text: "Reusable colours, fonts and components so every screen stays consistent." },
+        { title: "Logos and brand identity", text: "A logo, colour palette and typography that reflect who you are." },
+        { title: "Social media and print", text: "Posts, flyers, posters and presentations that match your brand." },
+      ],
+      benefits: [
+        { title: "Easier to use", text: "Fewer questions, more people completing what they came to do." },
+        { title: "A consistent brand", text: "The same look across your app, website, social media and print." },
+        { title: "Faster development", text: "Clear designs mean fewer surprises and changes during the build." },
+        { title: "Accessible to everyone", text: "Readable text, good contrast and clear layouts for all users." },
+      ],
+    },
+    training: {
+      intro:
+        "Software only helps when people know how to use it. We run practical training for teams and coding classes for beginners, on site or online, at a pace that suits the group.",
+      why: [
+        { title: "New tools need new skills", text: "Teams often use only part of the software they pay for. Training unlocks the rest." },
+        { title: "Tech skills open doors", text: "Learning to code builds problem-solving skills and leads to new jobs and projects." },
+        { title: "Learning alone is hard", text: "Videos help, but a teacher who answers your questions makes progress much faster." },
+      ],
+      offer: [
+        { title: "Software training for staff", text: "Sessions on the tools your team uses every day: office software, email, cloud apps and your own systems." },
+        { title: "Training on what we build", text: "Every system we deliver comes with training, so your team is confident from day one." },
+        { title: "Beginner coding classes", text: "First steps in programming for people with no experience." },
+        { title: "Web development courses", text: "HTML, CSS, JavaScript and modern frameworks, learned through real projects." },
+        { title: "Mobile development courses", text: "Building apps for Android and iOS, from idea to a working app." },
+        { title: "On site or online", text: "Classes at your office or online, for groups or individuals." },
+      ],
+      benefits: [
+        { title: "Confident teams", text: "People use their tools fully and need less help." },
+        { title: "Hands-on learning", text: "Exercises and projects, not just slides." },
+        { title: "Adapted to your level", text: "From complete beginners to people who want to go further." },
+        { title: "Skills you use right away", text: "Practical knowledge for work or your own projects." },
+      ],
+    },
   },
 
   labs: {

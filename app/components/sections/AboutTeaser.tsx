@@ -126,9 +126,8 @@ export async function AboutTeaser() {
           {/* Key values */}
           <Stack as="ul" listStyleType="none" gap="3">
             {t.aboutTeaser.values.map((v, i) => (
-              <Reveal key={v.title} delay={0.14 + i * 0.07}>
+              <Reveal as="li" key={v.title} delay={0.14 + i * 0.07}>
                 <HStack
-                  as="li"
                   gap="4"
                   p="3"
                   borderRadius="l3"

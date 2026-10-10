@@ -115,6 +115,12 @@ const config = defineConfig({
       transitionDuration: "0.5s",
       transitionTimingFunction: "cubic-bezier(.22,1,.36,1)",
     },
+    // Float (components/motion/Reveal).
+    ".imara-float": {
+      animation: "imaraFloat 2.4s cubic-bezier(.37,0,.63,1) infinite alternate both",
+      willChange: "transform",
+      "@media (prefers-reduced-motion: reduce)": { animation: "none" },
+    },
     "html.js [data-reveal]:not([data-shown])": {
       opacity: 0,
       transform: "translateY(var(--reveal-y, 16px))",
@@ -202,6 +208,18 @@ const config = defineConfig({
       imaraMarquee: {
         from: { transform: "translateX(0)" },
         to: { transform: "translateX(-50%)" },
+      },
+      imaraFloat: {
+        from: { transform: "translateY(0)" },
+        to: { transform: "translateY(-10px)" },
+      },
+      imaraFadeIn: {
+        from: { opacity: 0 },
+        to: { opacity: 1 },
+      },
+      imaraMenuIn: {
+        from: { opacity: 0, transform: "translateY(-12px) scale(.98)" },
+        to: { opacity: 1, transform: "none" },
       },
       imaraCaret: {
         "0%, 49%": { opacity: 1 },

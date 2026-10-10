@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { useEffect, useRef, type CSSProperties, type ReactNode } from "react";
 
 declare global {
@@ -22,12 +21,15 @@ export function Reveal({
   children,
   delay = 0,
   y = 16,
+  as: Tag = "div",
 }: {
   children: ReactNode;
   delay?: number;
   y?: number;
+  /** "li" when it is an item of a list (<ul>/<ol> may only contain <li>). */
+  as?: "div" | "li";
 }) {
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement & HTMLLIElement>(null);
 
   useEffect(() => {
     // The app has loaded: cancel themeScript's "show everything" fallback.
@@ -48,34 +50,25 @@ export function Reveal({
   }, []);
 
   return (
-    <div
+    <Tag
       ref={ref}
       data-reveal=""
       style={{ height: "100%", "--reveal-y": `${y}px`, transitionDelay: `${delay}s` } as CSSProperties}
     >
       {children}
-    </div>
+    </Tag>
   );
 }
 
-/** Gentle vertical float for decorative illustration layers. */
+/**
+ * Gentle vertical float for decorative illustration layers: up 10px and
+ * back, 2.4s each way with a sine-shaped ease. Plain CSS (the "imara-float"
+ * class in theme/index.ts), switched off for "reduce motion".
+ */
 export function Float({ children, delay = 0 }: { children: ReactNode; delay?: number }) {
   return (
-    <motion.div
-      initial={{ y: 0 }}
-      animate={{ y: -10 }}
-      // Goes up then back down ("mirror") with a sine-shaped ease, so the
-      // motion never jolts at the top or bottom. 2.4s each way.
-      transition={{
-        duration: 2.4,
-        ease: [0.37, 0, 0.63, 1],
-        repeat: Infinity,
-        repeatType: "mirror",
-        delay,
-      }}
-      style={{ willChange: "transform" }}
-    >
+    <div className="imara-float" style={{ animationDelay: `${delay}s` }}>
       {children}
-    </motion.div>
+    </div>
   );
 }

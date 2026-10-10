@@ -265,7 +265,7 @@ function CodeWindow() {
   const kw = "#FF9E64";
   const fn = "#7AA2F7";
   const str = "#9ECE6A";
-  const dim = "#7A7F8C";
+  const dim = "#A3A8B4";
   return (
     <Box
       w={u(205)}
@@ -433,7 +433,7 @@ export async function HeroIllustration() {
           <Float>
             <Stack gap={u(6)} align="flex-end">
               <StepTag>2 · {word(t.hero.run)}</StepTag>
-              <AfyaPhone width={u(158)} screen="home" eager />
+              <AfyaPhone width={u(158)} screen="home" eager sizes="(max-width: 1024px) 26vw, 170px" />
             </Stack>
           </Float>
         </Box>

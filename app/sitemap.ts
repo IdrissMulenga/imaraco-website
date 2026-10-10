@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { serviceIds } from "@/data/services";
 import { routes, site } from "@/data/site";
 import { localePath, locales } from "@/i18n/config";
 
@@ -6,7 +7,8 @@ const productPages = ["/products/duka-pos", "/products/school", "/products/imara
 
 // Lists every page in every language, each linking to its translations.
 export default function sitemap(): MetadataRoute.Sitemap {
-  const paths = [...Object.values(routes), ...productPages];
+  const servicePages = serviceIds.map((id) => `${routes.services}/${id}`);
+  const paths = [...Object.values(routes), ...productPages, ...servicePages];
 
   return paths.flatMap((path) =>
     locales.map((lang) => ({

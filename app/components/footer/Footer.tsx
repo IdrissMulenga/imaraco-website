@@ -24,7 +24,7 @@ type FooterLink = { href: string; label: string; external?: boolean; dot?: strin
 function FooterColumn({ title, links }: { title: string; links: FooterLink[] }) {
   return (
     <Stack as="nav" aria-label={title} gap="4">
-      <Text fontSize="xs" fontWeight="bold" letterSpacing="0.14em" textTransform="uppercase" color="fg.subtle">
+      <Text fontSize="xs" fontWeight="bold" letterSpacing="0.14em" textTransform="uppercase" color="fg.muted">
         {title}
       </Text>
       <Stack as="ul" gap="2.5" listStyleType="none">

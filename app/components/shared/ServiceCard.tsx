@@ -93,10 +93,9 @@ export function ServiceIcon({ id, className }: { id: ServiceId; className?: stri
 
 /**
  * Service card, styled like the product cards: a coloured top area with the
- * service icon, then title and description.
- * - Home page (default): the whole card links to the service on /services.
- * - Services page (`detailed`): adds "what's included". One contact button
- *   at the bottom of the page replaces a "Request a quote" on every card.
+ * service icon, then title and description. The whole card links to the
+ * service's own page (/services/web etc.).
+ * - Services page (`detailed`): also lists "what's included".
  * Hover: card lifts, border takes the service colour, icon tilts, glow grows.
  */
 export async function ServiceCard({ service, detailed = false }: { service: Service; detailed?: boolean }) {
@@ -201,13 +200,9 @@ export async function ServiceCard({ service, detailed = false }: { service: Serv
           </Badge>
         )}
         <Card.Title as="h3" fontFamily="heading" fontSize="lg" letterSpacing="-0.015em">
-          {detailed ? (
-            service.title
-          ) : (
-            <LinkOverlay asChild>
-              <NextLink href={`${href(routes.services)}#${service.id}`}>{service.title}</NextLink>
-            </LinkOverlay>
-          )}
+          <LinkOverlay asChild>
+            <NextLink href={href(`${routes.services}/${service.id}`)}>{service.title}</NextLink>
+          </LinkOverlay>
         </Card.Title>
         <Card.Description color="fg.muted">{service.short}</Card.Description>
         {detailed && (
@@ -231,26 +226,16 @@ export async function ServiceCard({ service, detailed = false }: { service: Serv
         )}
       </Card.Body>
 
-      {!detailed && (
-        <Card.Footer px={{ base: "5", md: "6" }} pb={{ base: "5", md: "6" }}>
-          <HStack gap="1.5" fontSize="sm" fontWeight="semibold" color={accent} aria-hidden="true">
-            <Text>{t.common.learnMore}</Text>
-            <LuArrowRight className="sc-arrow" />
-          </HStack>
-        </Card.Footer>
-      )}
+      <Card.Footer px={{ base: "5", md: "6" }} pb={{ base: "5", md: "6" }} mt="auto">
+        <HStack gap="1.5" fontSize="sm" fontWeight="semibold" color={accent} aria-hidden="true">
+          <Text>{t.common.learnMore}</Text>
+          <LuArrowRight className="sc-arrow" />
+        </HStack>
+      </Card.Footer>
       </Box>
     </Card.Root>
   );
 
-  if (detailed) {
-    // Anchor so home-page cards can jump straight to this service.
-    return (
-      <Box id={service.id} h="full" scrollMarginTop="24">
-        {card}
-      </Box>
-    );
-  }
   return (
     <LinkBox asChild h="full">
       {card}

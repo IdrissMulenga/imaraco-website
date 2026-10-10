@@ -1,4 +1,4 @@
-import { Alert, Badge, Box, Center, Grid, Heading, HStack, List, SimpleGrid, Stack, Text } from "@chakra-ui/react";
+import { Alert, Badge, Box, Center, Grid, Heading, HStack, List, Stack, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import NextLink from "next/link";
 import { FaAndroid, FaApple } from "react-icons/fa";
@@ -97,8 +97,7 @@ export async function AfyaSpotlight({
           <Text textStyle="lead" color="fg.muted">
             {t.afya.text}
           </Text>
-          <List.Root gap="2" variant="plain">
-            <SimpleGrid columns={{ base: 1, sm: 2 }} gap="2">
+          <List.Root variant="plain" display="grid" gridTemplateColumns={{ base: "1fr", sm: "1fr 1fr" }} gap="2">
               {t.afya.features.map((f) => (
                 <List.Item key={f}>
                   {/* Green tick: Imara Afya's green (from its logo) */}
@@ -108,7 +107,6 @@ export async function AfyaSpotlight({
                   {f}
                 </List.Item>
               ))}
-            </SimpleGrid>
           </List.Root>
           {/* The wearable band (coming soon); hidden where the band has its own section */}
           {showBandNote && (
@@ -174,12 +172,13 @@ export async function AfyaSpotlight({
           borderWidth="1px"
           borderColor={{ _light: "#D6E4F5", _dark: "#1C2B40" }}
           py={{ base: "8", md: "12" }}
+          px={{ base: "6", md: "8" }}
           overflow="hidden"
           role="img"
           aria-label={t.afya.screensAlt}
         >
           {/* Real screens on both platforms: iPhone (front) and Pixel (behind) */}
-          <Box position="relative" w="min(440px, 86vw)" aspectRatio={{ base: "440 / 610", md: "440 / 560" }}>
+          <Box position="relative" w="full" maxW="440px" aspectRatio={{ base: "440 / 610", md: "440 / 560" }}>
             <Stack position="absolute" right="0" top="0" w="54%" align="center" gap="3">
               <AfyaPhone width="100%" device="pixel" screen="android-home" />
               <PlatformLabel icon={<FaAndroid />} label="Android" />

@@ -133,7 +133,7 @@ export async function ProductCard({ product }: { product: Product }) {
 
       <Card.Footer flexDirection="column" alignItems="stretch" gap="3" px={{ base: "5", md: "6" }} pb={{ base: "5", md: "6" }}>
         <HStack justify="space-between" gap="3">
-          <Text fontSize="xs" color="fg.subtle" fontWeight="medium">
+          <Text fontSize="xs" color="fg.muted" fontWeight="medium">
             {product.meta}
           </Text>
           {href && (

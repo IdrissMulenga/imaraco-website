@@ -1,7 +1,6 @@
 "use client";
 
 import { Box, Button, Center, HStack, IconButton, Portal, Stack, Text } from "@chakra-ui/react";
-import { AnimatePresence, motion } from "framer-motion";
 import NextLink from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
@@ -10,8 +9,6 @@ import { useI18n } from "@/i18n/client";
 import { NAV_ICON_BUTTON } from "./ColorModeButton";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { isActiveLink, navCta, navLinks } from "./navLinks";
-
-const MotionBox = motion.create(Box);
 
 // Navbar height (phones / tablet and up). The menu card opens just below it.
 export const NAVBAR_HEIGHT = { base: "4rem", md: "4.5rem" };
@@ -91,11 +88,10 @@ export function MobileMenu() {
       </IconButton>
 
       <Portal>
-        <AnimatePresence>
-          {open && (
-            // Dimmed page behind the card (the navbar stays above it)
-            <MotionBox
-              key="backdrop"
+        {open && (
+          <>
+            {/* Dimmed page behind the card (the navbar stays above it) */}
+            <Box
               display={{ lg: "none" }}
               position="fixed"
               top={NAVBAR_HEIGHT}
@@ -105,16 +101,11 @@ export function MobileMenu() {
               bg="blackAlpha.500"
               backdropFilter="blur(2px)"
               onClick={close}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.2 }}
+              animation="imaraFadeIn 0.2s ease-out"
+              css={{ "@media (prefers-reduced-motion: reduce)": { animation: "none" } }}
             />
-          )}
-          {open && (
-            // The card
-            <MotionBox
-              key="panel"
+            {/* The card */}
+            <Box
               ref={panelRef}
               id="mobile-menu"
               display={{ lg: "none" }}
@@ -128,11 +119,9 @@ export function MobileMenu() {
               borderRadius="l4"
               boxShadow="2xl"
               p="2"
-              initial={{ opacity: 0, y: -12, scale: 0.98 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: -8, scale: 0.98 }}
-              transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
-              style={{ transformOrigin: "top center" }}
+              animation="imaraMenuIn 0.22s cubic-bezier(.22,1,.36,1)"
+              transformOrigin="top center"
+              css={{ "@media (prefers-reduced-motion: reduce)": { animation: "none" } }}
             >
               <Stack as="nav" aria-label={t.nav.mobileAria} gap="0.5">
                 {navLinks.map((link, i) => {
@@ -194,9 +183,9 @@ export function MobileMenu() {
                   <NextLink href={href(navCta.href)}>{t.nav[navCta.label]}</NextLink>
                 </Button>
               </Box>
-            </MotionBox>
-          )}
-        </AnimatePresence>
+            </Box>
+          </>
+        )}
       </Portal>
     </>
   );

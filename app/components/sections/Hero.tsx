@@ -1,9 +1,18 @@
-import { Box, Button, Container, Grid, Heading, Stack, Text } from "@chakra-ui/react";
+import { Box, Button, Container, Grid, Heading, HStack, Stack, Text } from "@chakra-ui/react";
 import { LuArrowRight } from "react-icons/lu";
 import { HeroIllustration } from "@/components/illustrations/HeroIllustration";
 import NextLink from "next/link";
 import { routes } from "@/data/site";
 import { getI18n } from "@/i18n/server";
+
+// Hero buttons: on phones they share the row, each sized to its label.
+const heroButton = {
+  flex: { base: "1 1 auto", sm: "0 0 auto" },
+  minW: "0",
+  px: { base: "3.5", sm: "7" },
+  fontSize: { base: "13px", sm: "md" },
+  letterSpacing: { base: "-0.01em", sm: "-0.005em" },
+} as const;
 
 export async function Hero() {
   const { lang, t, href } = await getI18n();
@@ -66,17 +75,22 @@ export async function Hero() {
             <Text textStyle="lead" color="fg.muted" maxW="xl">
               {t.hero.text}
             </Text>
-            <Stack direction={{ base: "column", sm: "row" }} flexWrap="wrap" gap="3" pt="2">
-              <Button asChild size="xl">
+            {/* Side by side at every width. On phones the labels stay on one
+                line: smaller text, no arrow, each button as wide as its label (on
+                very narrow phones the second one moves to its own line). */}
+            <HStack gap={{ base: "2", sm: "3" }} pt="2" flexWrap="wrap">
+              <Button asChild size={{ base: "lg", sm: "xl" }} {...heroButton}>
                 <NextLink href={href(routes.products)}>
                   {t.hero.ctaPrimary}
-                  <LuArrowRight />
+                  <Box as="span" display={{ base: "none", sm: "inline-flex" }}>
+                    <LuArrowRight />
+                  </Box>
                 </NextLink>
               </Button>
-              <Button asChild size="xl" variant="outline" colorPalette="gray">
+              <Button asChild size={{ base: "lg", sm: "xl" }} variant="outline" colorPalette="gray" {...heroButton}>
                 <NextLink href={href(routes.contact)}>{t.hero.ctaSecondary}</NextLink>
               </Button>
-            </Stack>
+            </HStack>
           </Stack>
 
           <Box maxW={{ base: "md", md: "xl", lg: "none" }} mx={{ base: "auto", lg: "0" }} w="full">
